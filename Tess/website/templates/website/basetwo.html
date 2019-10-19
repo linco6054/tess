@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'website/main.css' %}">
+    
     {% if title %}
-    <title>Django Blog -{{title}}</title>
+    <title>The Blog -{{title}}</title>
     {% else %}
     <title>User Acc</title>
     {% endif %}
@@ -24,7 +25,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link" href="#">Home</a>
+                        <a class="nav-item nav-link" href="/">Home</a>
                         <a class="nav-item nav-link" href="#">About</a>
                     </div>
                     <!-- Navbar Right Side -->
@@ -55,6 +56,7 @@
 
                 {% block content %}{% endblock %}
             </div>
+            {% if user.is_authenticated %}
             <div class="col-md-4">
                 <div class="content-section">
                     <h3>Our Sidebar</h3>
@@ -68,6 +70,7 @@
                     </p>
                 </div>
             </div>
+            {% endif %}
         </div>
     </main>
 

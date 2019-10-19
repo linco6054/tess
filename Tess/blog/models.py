@@ -10,10 +10,11 @@ class Admin_Post(models.Model):
     description = models.CharField(max_length=100)
     content =models.TextField()
     document = models.ImageField(upload_to='images/')
-    date = models.DateTimeField(default=timezone.now)
+    start_date = models.DateTimeField(default=timezone.now)
+    end_date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
         return self.title
 
-    def get_absolute_url(self):
-        return reverse('post-detail', kwargs={'pk': self.pk})
+    # def get_absolute_url(self):
+    #     return reverse('post-detail', kwargs={'pk': self.pk})

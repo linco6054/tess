@@ -1,8 +1,32 @@
 {% extends 'website/basetwo.html'%}
 {% block content %}
 
+ {% for post in posts %}
+    <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}" alt="">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2 sm" href="">{{ post.title.upper }}</a>
+                <!-- date filter date:'f d,y' -->
+                <small class="text-muted ">date posted  {{ post.start_date }}</small>
+                
+            </div>
+            <h2><a class="article-title" href="">{{ post.description }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+            <small class="text">due date  {{ post.end_date }}</small>
+        </div>
+    </article> 
+    {% endfor %}
+    {% if is_paginated %}
+        {% if page_obj.has_previous %}
+        <a class='btn btn-outline-info mb-4' href="?page=1">first</a>
+        <a class='btn btn-outline-info mb-4' href="?page_obj.previous_page_number">previous</a>
+        {% endif %}
 
-<h1>here now</h1>
+{% if page_obj.has_next %}
+<a class='btn btn-outline-info mb-4' href="?page={{page_obj.next_page_number}}">Next</a>
+<a class='btn btn-outline-info mb-4' href="?page_obj.paginator.num_pages">Last</a>
+{% endif %}
 
-
- {% endblock content %}
+    {% endif %}
+{% endblock content %}
