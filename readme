@@ -1,1 +1,9 @@
 start
+website 
+    card
+        image
+        heading
+        subtitle
+        paragraph
+    
+    

@@ -1,0 +1,184 @@
+{% extends 'website/base.html'%}
+{% block content %}
+{% load static %}
+  <!-- The body content goes here -->
+
+  <!-- cards starts -->
+  
+  <div class=" justify-content-center mt-5">
+    <h1 class=" text-center">OUR SERVICES</h1>
+    <p class="text-muted text-center">Lorem ipsum sum dolorum praesentium eius!</p>
+    
+    <div class="container my-3 py-5 text-center">
+      <div class="row mb-5 card-deck ">
+      {% for post in card%}
+        <div class="col-md-4 mb-2 ">
+        <div class="card  border-dark mb-3 ">
+          <div class="card-body contact">
+            <img class="img-fluid mx-auto d-block" src="images/download.jpg" alt=""style="width:70px;height:35px;">
+            <h4 class="card-title mt-3">{{post.card_heading}}</h4>
+            <h6 class="card-subtitle mt-3">{{post.card_subtitle}}</h6>
+            <p class="card-text mt-3 ">
+              <font size="2">fffvf{{post.card_paragraph}}
+              </font>
+            </p>
+            <a href="#" class="btn btn-dark  ">Read more</a>
+          </div>
+          </div>
+        </div>
+        {% endfor%}
+
+      </div>
+    </div>
+    
+    <div class="container">
+      <hr style="height:3px; border:none; color:#d9009d; background-color:#d9009d;">
+    </div>
+    <!-- cards end -->
+    <div>
+      <h1 class="text-center">OUR CLIENTS</h1>
+      <h6 class="text-center text-muted"  >Business optimization for leading brands.
+      </h6>
+    </div>
+    <!-- second card -->
+    <div class="container my-3 py-5 text-center counter-section ">
+      <div class="card-deck">
+        <div class="col-md-4 mb-2 ">
+        <div class="card my-card ">
+          <div class="card-bodys mt-5">
+              <img src="{% static 'website/images/Papa-outsourcing-logo.png' %}" class='img-thumbnail mt-2 contactimg' alt=""style="width:100px;height:70px;">
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4 mb-2">
+        <div class="card my-card ">
+          <div class="card-bodys mt-5">
+          <div class='well well-sm'>
+              <img src="{% static 'website/images/kazi-remote-newest.png' %}" class='img-thumbnail mt-2 contactimg' alt=""style="width:100px;height:70px;">
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-2">
+        <div class="card my-card">     
+          <div class="card-bodys mt-5">
+              <img src="{% static 'website/images/Sentibay-logo.png' %}" class='img-thumbnail mt-2 contactimg' alt=""style="width:100px;height:70px;">
+          </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="card-deck">
+        <div class="col-md-4 mb-2">
+        <div class="card my-card">
+          <div class="card-bodys mt-5">
+            <img src="{% static 'website/images/cropped-the-online-workshop-1.png' %}" class='img-thumbnail  contactimg' alt=""style="width:100px;height:70px;">
+          </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-2">
+        <div class="card my-card">
+          <div class="card-bodys mt-5">
+              <img src="{% static 'website/images/logo.png' %}" class='img-thumbnail mt-2 contactimg' alt=""style="width:100px;height:70px;">
+          </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-2" >
+        <div class="card my-card">
+          <div class="card-bodys mt-5">
+            <a href="https://ajiradigital.go.ke/home"><img src="{% static 'website/images/downloadm.jpg' %}" class='img-thumbnail mt-2 contactimg' alt="" style="width:80px;height:60px;"></a>
+             
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- end second card -->
+    <div class="container">
+      <hr class=' mb-2'style="height:3px; border:none; color:#d9009d; background-color:#d9009d;">
+    </div>
+    <!-- counter start -->
+    <div class="container counter-section">
+      <div class="row text-center">
+        <div class="col-md-4 mb-2">
+          <div class=" my-card card jumbotron">
+          <p class="card-title text-center" style="color:rgb(238, 24, 156)"><font size='80'><span class="counter">30,000</span></font></p>
+          <p class="text-center"><font size='3'>TRANSCRIBED FILES</p></font>
+          </div>
+        </div>
+        <div class="col-md-4 mb-2">
+          <div class=" my-card card jumbotron">
+            <p class="card-title text-center" style="color:rgb(238, 24, 156)">
+              <font size='80'><span class="counter">47,000</span></font>
+            </p>
+            <p class="text-center">
+              <font size='3'>TRANSCRIBED FILES
+            </p>
+            </font>
+          </div>
+        </div>
+        <div class="col-md-4 mb-2 ">
+          <div class=" my-card card jumbotron">
+            <p class="card-title text-center" style="color:rgb(238, 24, 156)">
+              <font size='80'><span class="counter">40,000</span></font>
+            </p>
+            <p class="text-center">
+              <font size='3'>TRANSCRIBED FILES
+            </p>
+            </font>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <hr class="mb-5" style="height:3px; border:none; color:#d9009d; background-color:#d9009d;">
+    </div>
+    <!-- counter ends -->
+    <!-- video start -->
+<div class="container">
+  <div class="card-deck">
+     <div class="card">
+    <div class="col-md-4 mb-2">
+     
+        <iframe width="550" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" class="rounded">
+        </iframe>
+      </div>
+    </div>
+    <div id="cardm" class="card card-deck personal">
+    <div class="col-md-12 "> 
+        
+         
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="{% static 'website/images/download2.jpg' %}" alt="Avatar" style="width:500px;height:320px;">
+                </div>
+                <div class="flip-card-back">
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                  
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                  
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+  
+  </div>
+</div>
+    <!-- video end -->
+    <!-- end body -->
+   {% endblock content %}
